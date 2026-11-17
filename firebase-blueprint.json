@@ -1,0 +1,337 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account and profile information on the Orthodox Tewahido & Economy platform",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "email": { "type": "string" },
+        "fullName": { "type": "string" },
+        "name": { "type": "string" },
+        "username": { "type": "string" },
+        "primaryRole": { "type": "string" },
+        "secondaryRoles": { "type": "array", "items": { "type": "string" } },
+        "profession": { "type": "string" },
+        "businessName": { "type": "string" },
+        "businessCategory": { "type": "string" },
+        "location": { "type": "string" },
+        "phone": { "type": "string" },
+        "bio": { "type": "string" },
+        "skills": { "type": "array", "items": { "type": "string" } },
+        "telegramHandle": { "type": "string" },
+        "profilePhotoUrl": { "type": "string" },
+        "parishName": { "type": "string" },
+        "verificationDocType": { "type": "string" },
+        "verificationDocDetails": { "type": "string" },
+        "verificationStatus": { "type": "string" },
+        "isSuspended": { "type": "boolean" },
+        "rating": { "type": "number" },
+        "reviewCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "email", "fullName", "primaryRole"]
+    },
+    "CompletedJob": {
+      "title": "CompletedJob",
+      "description": "Completed project history record under a user's profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "clientName": { "type": "string" },
+        "category": { "type": "string" },
+        "completionDate": { "type": "string" },
+        "earningsAmount": { "type": "number" },
+        "rating": { "type": "number" },
+        "feedback": { "type": "string" },
+        "description": { "type": "string" },
+        "skillsUsed": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "title", "clientName"]
+    },
+    "UserNotification": {
+      "title": "UserNotification",
+      "description": "Real-time user notification subcollection document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string" },
+        "isRead": { "type": "boolean" },
+        "referenceId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "title", "message", "type"]
+    },
+    "Job": {
+      "title": "Job",
+      "description": "Freelance job or gig posting dual-synced to /jobs and /gigs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "employerId": { "type": "string" },
+        "employerName": { "type": "string" },
+        "employerEmail": { "type": "string" },
+        "employerVerified": { "type": "boolean" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "description": { "type": "string" },
+        "budget": { "type": "number" },
+        "budgetAmount": { "type": "number" },
+        "category": { "type": "string" },
+        "location": { "type": "string" },
+        "skillsRequired": { "type": "array", "items": { "type": "string" } },
+        "projectType": { "type": "string" },
+        "employmentType": { "type": "string" },
+        "experienceLevel": { "type": "string" },
+        "deliveryDays": { "type": "integer" },
+        "status": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "deadline": { "type": "string" },
+        "proposalsCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "employerId", "title", "description", "budget"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Marketplace product listing posted by verified/orthodox sellers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sellerId": { "type": "string" },
+        "sellerName": { "type": "string" },
+        "sellerVerified": { "type": "boolean" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "currency": { "type": "string" },
+        "quantity": { "type": "integer" },
+        "location": { "type": "string" },
+        "condition": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "isAvailable": { "type": "boolean" },
+        "deliveryInfo": { "type": "string" },
+        "moq": { "type": "integer" },
+        "wholesalePrice": { "type": "number" },
+        "isFeatured": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "sellerId", "sellerName", "title", "price", "category"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Professional freelance service offering browsable by category",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "providerId": { "type": "string" },
+        "providerName": { "type": "string" },
+        "name": { "type": "string" },
+        "providerEmail": { "type": "string" },
+        "isVerified": { "type": "boolean" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "category": { "type": "string" },
+        "rateDescription": { "type": "string" },
+        "rateAmount": { "type": "number" },
+        "location": { "type": "string" },
+        "description": { "type": "string" },
+        "experienceYears": { "type": "integer" },
+        "phone": { "type": "string" },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "integer" },
+        "isAvailable": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "providerId", "title", "category"]
+    },
+    "Proposal": {
+      "title": "Proposal",
+      "description": "Freelance bid on an active project listing",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "jobId": { "type": "string" },
+        "jobTitle": { "type": "string" },
+        "employerId": { "type": "string" },
+        "freelancerId": { "type": "string" },
+        "freelancerName": { "type": "string" },
+        "freelancerEmail": { "type": "string" },
+        "freelancerPhone": { "type": "string" },
+        "coverLetter": { "type": "string" },
+        "bidAmount": { "type": "number" },
+        "deliveryDays": { "type": "integer" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "jobId", "freelancerId", "bidAmount", "coverLetter"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "Real-time communication thread between clients, sellers, and freelancers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "participants": { "type": "array", "items": { "type": "string" } },
+        "participant1Id": { "type": "string" },
+        "participant1Name": { "type": "string" },
+        "participant2Id": { "type": "string" },
+        "participant2Name": { "type": "string" },
+        "projectId": { "type": "string" },
+        "projectTitle": { "type": "string" },
+        "opportunityType": { "type": "string" },
+        "budgetOrPrice": { "type": "number" },
+        "category": { "type": "string" },
+        "lastMessage": { "type": "string" },
+        "lastMessageSenderId": { "type": "string" },
+        "lastMessageTimestamp": { "type": "string", "format": "date-time" },
+        "unreadCountUser1": { "type": "integer" },
+        "unreadCountUser2": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "participants", "participant1Id", "participant2Id"]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "Individual message within a conversation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "conversationId": { "type": "string" },
+        "senderId": { "type": "string" },
+        "senderName": { "type": "string" },
+        "receiverId": { "type": "string" },
+        "content": { "type": "string" },
+        "projectTitle": { "type": "string" },
+        "isRead": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "conversationId", "senderId", "receiverId", "content"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "Mutual user/seller/freelancer rating and review",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "targetUserId": { "type": "string" },
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "projectTitle": { "type": "string" },
+        "projectRole": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "targetUserId", "authorId", "rating", "comment"]
+    },
+    "Report": {
+      "title": "Report",
+      "description": "Content moderation report filed by users against users, jobs, gigs, products, services, or messages",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reporterId": { "type": "string" },
+        "reporterName": { "type": "string" },
+        "targetType": { "type": "string" },
+        "targetId": { "type": "string" },
+        "targetTitle": { "type": "string" },
+        "reason": { "type": "string" },
+        "details": { "type": "string" },
+        "status": { "type": "string" },
+        "actionTaken": { "type": "string" },
+        "resolvedBy": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "reporterId", "targetId", "targetType", "reason"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles indexed by authenticated user ID"
+    },
+    "/users/{userId}/completed_jobs/{jobId}": {
+      "schema": "CompletedJob",
+      "description": "Completed freelance jobs / deals history for a user"
+    },
+    "/users/{userId}/notifications/{notifId}": {
+      "schema": "UserNotification",
+      "description": "Real-time notifications subcollection per user"
+    },
+    "/notifications/{notifId}": {
+      "schema": "UserNotification",
+      "description": "Top-level real-time notifications mirror for cross-platform sync"
+    },
+    "/jobs/{jobId}": {
+      "schema": "Job",
+      "description": "Freelance job postings from authenticated employers"
+    },
+    "/gigs/{gigId}": {
+      "schema": "Job",
+      "description": "Dual-synced freelance gig and job postings"
+    },
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Public marketplace product listings"
+    },
+    "/services/{serviceId}": {
+      "schema": "Service",
+      "description": "Public professional services catalog filterable by category"
+    },
+    "/businesses/{businessId}": {
+      "schema": "Product",
+      "description": "B2B commercial enterprises, importers, and distributors"
+    },
+    "/proposals/{proposalId}": {
+      "schema": "Proposal",
+      "description": "Freelance project proposals submitted by bidders"
+    },
+    "/conversations/{conversationId}": {
+      "schema": "Conversation",
+      "description": "Project conversation channels between clients and providers"
+    },
+    "/conversations/{conversationId}/messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "Real-time project messages with read-receipt status"
+    },
+    "/reviews/{reviewId}": {
+      "schema": "Review",
+      "description": "Ratings and reviews recalculating user rating and reviewCount"
+    },
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "Content moderation flags and reports"
+    },
+    "/prayers/{prayerId}": {
+      "schema": "UserNotification",
+      "description": "Community prayer requests with Amen counts and comments subcollection"
+    },
+    "/prayers/{prayerId}/comments/{commentId}": {
+      "schema": "ChatMessage",
+      "description": "Encouragement comments on prayer requests"
+    },
+    "/success_stories/{storyId}": {
+      "schema": "UserNotification",
+      "description": "Community testimonials and verified B2B/hiring success stories"
+    }
+  }
+}

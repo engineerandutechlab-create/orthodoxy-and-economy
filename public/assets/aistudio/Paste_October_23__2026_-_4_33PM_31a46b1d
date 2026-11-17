@@ -1,0 +1,1846 @@
+
+# ROLE
+
+Act as a **Principal Product Architect, Senior Full-Stack Engineer, AI/ML Engineer, Marketplace Architect, UX/UI Director, Security Engineer, and Product Growth Strategist**.
+
+You are working on an existing web application that is intended to become a **professional Ethiopian Orthodox community-oriented employment, marketplace, business networking, and AI content platform**.
+
+Your responsibility is NOT to create a simple demo.
+
+Your responsibility is to transform the existing application into a **production-grade, scalable, intelligent, trustworthy, modern digital platform**.
+
+---
+
+# 1. FIRST: AUDIT THE EXISTING APPLICATION
+
+Before modifying anything:
+
+1. Inspect the entire existing application.
+2. Understand the current:
+   - frontend
+   - backend
+   - database
+   - authentication
+   - routes
+   - API architecture
+   - components
+   - services
+   - state management
+   - forms
+   - dashboards
+   - existing AI functionality
+   - search
+   - messaging
+   - user profiles
+   - marketplace
+   - job system
+   - media handling
+3. Identify:
+   - incomplete features
+   - broken features
+   - duplicated components
+   - inconsistent UI
+   - poor UX
+   - security risks
+   - missing states
+   - scalability problems
+   - missing database relationships
+   - missing validation
+   - weak AI architecture
+4. Do NOT destroy working functionality.
+5. Reuse existing architecture where it is good.
+6. Refactor only where necessary.
+7. Do not create fake functionality.
+
+The final application must behave like a real production product, not a visual prototype.
+
+---
+
+# 2. PRODUCT VISION
+
+Build a unified platform where users can:
+
+### Employment
+
+- Employers publish jobs.
+- Job seekers create professional profiles.
+- Employers discover suitable candidates.
+- Job seekers discover suitable jobs.
+- AI analyzes jobs.
+- AI analyzes candidate profiles.
+- AI intelligently matches jobs and candidates.
+- AI explains why a match is recommended.
+
+### Marketplace
+
+- Buyers discover products.
+- Sellers publish products.
+- Buyers search naturally.
+- AI understands product descriptions.
+- AI recommends relevant products.
+- AI matches buyers with sellers.
+- Importers can connect with distributors.
+- Distributors can connect with suppliers/importers.
+
+### Services
+
+Users can advertise:
+
+- professional services
+- technical services
+- software services
+- repair services
+- design services
+- consulting
+- construction
+- transportation
+- education
+- agriculture
+- business services
+- other legitimate services
+
+AI should help users create professional service advertisements.
+
+### Business Networking
+
+Businesses should be able to:
+
+- create business profiles
+- advertise
+- publish products
+- publish vacancies
+- find suppliers
+- find distributors
+- find customers
+- find service providers
+- communicate with potential partners
+
+### AI Content Creation
+
+Users should be able to turn their:
+
+- job
+- product
+- service
+- business
+- professional profile
+- announcement
+
+into professional:
+
+- social media posts
+- images
+- promotional videos
+- Telegram posts
+- TikTok-ready videos
+- Facebook posts
+- Instagram content
+- LinkedIn content
+- WhatsApp-ready content
+
+---
+
+# 3. CORE AI ENGINE
+
+Create a centralized AI architecture.
+
+Do NOT scatter random AI calls throughout the frontend.
+
+Create a clean AI service layer such as:
+
+AIService
+
+with capabilities including:
+
+- analyzeJob()
+- improveJobPost()
+- analyzeCandidate()
+- matchCandidateToJob()
+- recommendJobs()
+- recommendCandidates()
+- analyzeProduct()
+- improveProductListing()
+- recommendProducts()
+- matchBuyerToSeller()
+- matchImporterToDistributor()
+- matchServiceProvider()
+- semanticSearch()
+- generateSocialCopy()
+- generateImagePrompt()
+- generateVideoScript()
+- generateVideoStoryboard()
+- generateContent()
+- summarizeProfile()
+- detectDuplicate()
+- detectSpam()
+- generateBusinessInsights()
+- generateRecommendations()
+
+The exact implementation should follow the existing project architecture.
+
+---
+
+# 4. AI JOB INTELLIGENCE
+
+When an employer creates a job, AI should analyze the listing.
+
+Extract structured information such as:
+
+- job title
+- normalized job title
+- industry
+- category
+- subcategory
+- required skills
+- preferred skills
+- experience
+- education
+- certifications
+- responsibilities
+- employment type
+- workplace type
+- location
+- salary if provided
+- language requirements
+- seniority
+- technical skills
+- soft skills
+- keywords
+
+IMPORTANT:
+
+NEVER invent requirements that the employer did not provide.
+
+If information is missing, mark it as:
+
+"Not specified"
+
+instead of guessing.
+
+---
+
+# 5. AI JOB POST ASSISTANT
+
+When an employer writes something like:
+
+"Need Python developer"
+
+AI should intelligently help transform it into a professional job listing.
+
+The AI may suggest:
+
+- professional title
+- responsibilities
+- required skills
+- preferred skills
+- job summary
+- candidate profile
+- screening questions
+- keywords
+
+But AI must clearly distinguish:
+
+USER PROVIDED INFORMATION
+
+from
+
+AI SUGGESTIONS.
+
+The employer must be able to:
+
+- accept
+- edit
+- reject
+- regenerate
+
+every suggestion.
+
+Never fabricate salary, company information, benefits, experience requirements, or credentials.
+
+---
+
+# 6. AI CANDIDATE ANALYSIS
+
+For job seekers, analyze only information they voluntarily provide.
+
+Possible data:
+
+- skills
+- experience
+- education
+- portfolio
+- certifications
+- work history
+- preferred job type
+- preferred location
+- availability
+- languages
+- professional interests
+
+AI can help:
+
+- improve CV/profile descriptions
+- identify missing profile sections
+- create professional summaries
+- organize skills
+- recommend relevant jobs
+- prepare applications
+
+NEVER fabricate:
+
+- employment history
+- certificates
+- degrees
+- skills
+- employers
+- achievements
+- years of experience.
+
+---
+
+# 7. INTELLIGENT JOB MATCHING ENGINE
+
+Create a professional explainable matching system.
+
+The matching engine should consider legitimate job-related factors such as:
+
+- skill similarity
+- experience compatibility
+- education compatibility
+- location compatibility
+- work mode
+- employment type
+- language requirements
+- availability
+- salary compatibility where provided
+- job preferences
+- semantic similarity
+- responsibilities compatibility
+
+Do NOT use protected or sensitive characteristics to rank candidates.
+
+Do not discriminate based on:
+
+- religion
+- ethnicity
+- gender
+- disability
+- age
+- political views
+- other protected characteristics.
+
+The platform can maintain its community identity and purpose, but the AI matching algorithm must remain job-relevant and fair.
+
+---
+
+# 8. EXPLAINABLE MATCH SCORE
+
+Every recommendation should explain itself.
+
+Example UI:
+
+"Strong Match"
+
+Reasons:
+
+✓ Python matches
+✓ Backend development experience matches
+✓ Remote work preference matches
+✓ Required experience level matches
+
+Potential gaps:
+
+• Docker experience not found in profile
+
+Do not show a mysterious number without explanation.
+
+If a numerical score is used, make the scoring methodology consistent and explainable.
+
+---
+
+# 9. EMPLOYER AI CANDIDATE DISCOVERY
+
+After publishing a job:
+
+AI should automatically identify potentially relevant candidates from the platform.
+
+Employer dashboard:
+
+## AI Recommended Candidates
+
+Each candidate card should show:
+
+- profile photo
+- name
+- professional title
+- key skills
+- relevant experience
+- location
+- portfolio
+- match explanation
+- strengths
+- possible gaps
+- profile completeness
+
+Actions:
+
+- View Profile
+- Save
+- Contact
+- Invite to Apply
+- Compare
+
+---
+
+# 10. JOB SEEKER AI RECOMMENDATIONS
+
+Create:
+
+## Recommended Jobs For You
+
+Recommendations should be based on:
+
+- profile
+- skills
+- experience
+- preferences
+- previous legitimate activity
+- job requirements
+- semantic similarity
+
+Include:
+
+"Why this job?"
+
+with an explanation.
+
+---
+
+# 11. AI CV & PROFILE ASSISTANT
+
+Add an AI assistant inside profile creation.
+
+Features:
+
+### Professional Summary Generator
+
+### Experience Description Improver
+
+### Skills Organizer
+
+### Portfolio Description Generator
+
+### Project Description Generator
+
+### Profile Completeness Analyzer
+
+### Job-Specific Profile Optimization
+
+Example:
+
+"Optimize my profile for this Python Developer position."
+
+AI should suggest improvements without fabricating facts.
+
+---
+
+# 12. AI MARKETPLACE INTELLIGENCE
+
+When a seller creates a product listing, AI should analyze:
+
+- product name
+- category
+- subcategory
+- description
+- specifications
+- condition
+- price if provided
+- location
+- keywords
+- intended audience
+
+AI can improve:
+
+- product title
+- product description
+- search keywords
+- category
+- listing quality
+
+Never invent:
+
+- price
+- warranty
+- specifications
+- brand
+- condition
+- location
+- contact information.
+
+---
+
+# 13. NATURAL LANGUAGE MARKETPLACE SEARCH
+
+Users should be able to search naturally.
+
+Examples:
+
+"Find affordable laptops for programming."
+
+"Show me used office computers in Addis Ababa."
+
+"Where can I find agricultural equipment?"
+
+"Find someone who sells Arduino components."
+
+"Show me Python developers."
+
+The AI should convert natural language into structured search filters where possible.
+
+Support:
+
+- English
+- Amharic
+- mixed Amharic-English
+
+Do not require users to know exact keywords.
+
+---
+
+# 14. BUYER ↔ SELLER MATCHING
+
+Create intelligent buyer/seller recommendations.
+
+Example:
+
+Buyer:
+
+"I need 20 laptops for a training center."
+
+AI should identify relevant sellers based on:
+
+- product relevance
+- quantity
+- location
+- price when available
+- seller reliability signals
+- listing quality
+- availability if provided
+
+The AI must never claim inventory availability unless the platform has current inventory data.
+
+---
+
+# 15. IMPORTER ↔ DISTRIBUTOR MATCHING
+
+Create a dedicated business matching system.
+
+Importer profile:
+
+- products
+- categories
+- countries/source markets
+- quantities
+- business location
+- distribution requirements
+
+Distributor profile:
+
+- product categories
+- distribution area
+- capacity
+- business type
+- location
+
+AI recommends relevant business connections.
+
+Explain:
+
+"Recommended because..."
+
+---
+
+# 16. SERVICE PROVIDER MATCHING
+
+Users should be able to ask:
+
+"I need a graphic designer."
+
+"I need a web developer."
+
+"I need someone to repair my computer."
+
+"I need an electrician."
+
+"I need an accountant."
+
+AI should identify relevant service providers.
+
+Matching factors:
+
+- service category
+- skills
+- location
+- availability
+- portfolio
+- experience
+- user preferences
+- verified information.
+
+---
+
+# 17. AI SEMANTIC SEARCH
+
+Create one intelligent global search.
+
+Search across:
+
+- jobs
+- people
+- businesses
+- products
+- services
+- posts
+
+Example:
+
+"remote Python jobs"
+
+should find jobs even when the exact phrase does not appear.
+
+Support:
+
+English + Amharic + mixed-language queries.
+
+---
+
+# 18. AI ASSISTANT
+
+Create a central platform AI assistant.
+
+Users can ask:
+
+"Find me a job."
+
+"Find Python developers."
+
+"Find laptop sellers."
+
+"Help me advertise my business."
+
+"Create a Telegram advertisement."
+
+"Improve my product listing."
+
+"Create a TikTok video script."
+
+"Find distributors."
+
+The assistant must use real platform data.
+
+NEVER fabricate listings, users, products, jobs, prices, or businesses.
+
+If no matching data exists, clearly say:
+
+"No matching listing was found."
+
+---
+
+# 19. AI CONTENT STUDIO
+
+Create a dedicated:
+
+# AI CONTENT STUDIO
+
+Users select:
+
+### Content Source
+
+- Job
+- Product
+- Service
+- Business
+- Professional Profile
+- Announcement
+
+### Platform
+
+- Facebook
+- Instagram
+- Telegram
+- TikTok
+- LinkedIn
+- WhatsApp
+
+### Language
+
+- Amharic
+- English
+- Mixed
+
+### Content Type
+
+- Text
+- Image
+- Video
+- Story
+- Short-form video
+- Advertisement
+
+### Tone
+
+- Professional
+- Promotional
+- Friendly
+- Educational
+- Urgent
+- Premium
+- Community-oriented
+
+---
+
+# 20. AI SOCIAL MEDIA COPY GENERATOR
+
+Generate platform-specific copy.
+
+### Facebook
+
+Generate:
+
+- headline
+- body
+- CTA
+- hashtags
+
+### Instagram
+
+Generate:
+
+- caption
+- CTA
+- hashtags
+
+### Telegram
+
+Generate:
+
+- Telegram-ready post
+- title
+- body
+- CTA
+- contact section
+
+Include:
+
+[Copy Telegram Post]
+
+If there is no official Telegram API integration, DO NOT pretend that it has been posted.
+
+Provide copy/export instead.
+
+### LinkedIn
+
+Generate professional business-oriented copy.
+
+### TikTok
+
+Generate:
+
+- hook
+- short script
+- scene sequence
+- on-screen text
+- caption
+- hashtags
+- CTA
+- suggested duration
+
+---
+
+# 21. AI IMAGE GENERATION
+
+Create a professional image-generation workflow.
+
+When generating promotional graphics:
+
+Use actual listing information.
+
+Do not hallucinate:
+
+- prices
+- phone numbers
+- addresses
+- logos
+- certifications
+- product specifications.
+
+Support aspect ratios:
+
+- 1:1
+- 4:5
+- 9:16
+- 16:9
+
+Create branded visual templates using:
+
+Primary Blue: #123B6D
+
+Dark Navy: #08294F
+
+Gold: #D4A72C
+
+Light Gold: #F3D77A
+
+White: #FFFFFF
+
+Light Background: #F8FAFC
+
+Maintain consistent branding.
+
+---
+
+# 22. AI VIDEO CREATION
+
+Create a professional video-generation architecture.
+
+If a real video generation API is available and configured:
+
+Use it.
+
+If no video-generation provider is configured:
+
+DO NOT fake video generation.
+
+Instead automatically create:
+
+- video concept
+- hook
+- script
+- storyboard
+- scene descriptions
+- visual asset instructions
+- voiceover script
+- subtitles
+- on-screen text
+- CTA
+- music recommendation
+- transition plan
+- final export specification.
+
+The architecture must make it possible to connect a real video-generation service later without rebuilding the application.
+
+---
+
+# 23. TIKTOK VIDEO WORKFLOW
+
+Create:
+
+## Create TikTok Video
+
+Steps:
+
+1. Select listing.
+2. AI analyzes listing.
+3. AI creates hook.
+4. AI creates script.
+5. AI creates scene plan.
+6. AI generates/requests visual assets.
+7. AI generates captions.
+8. AI prepares voiceover.
+9. AI prepares subtitles.
+10. User previews.
+11. User edits.
+12. Export TikTok-ready video.
+
+Default format:
+
+9:16 vertical.
+
+---
+
+# 24. TELEGRAM CONTENT WORKFLOW
+
+Create:
+
+## Telegram Advertisement
+
+AI automatically generates:
+
+- title
+- promotional text
+- key information
+- CTA
+- hashtags where appropriate
+- contact section
+
+Add:
+
+COPY
+
+DOWNLOAD
+
+EDIT
+
+SHARE
+
+If API integration is unavailable, do not claim automatic posting.
+
+---
+
+# 25. CONTENT TEMPLATES
+
+Create reusable templates:
+
+1. Job Vacancy
+2. Product Sale
+3. Service Advertisement
+4. Business Promotion
+5. Professional Profile
+6. Importer Announcement
+7. Distributor Announcement
+8. New Product
+9. Special Offer
+10. Educational Post
+11. Community Announcement
+12. Event Announcement
+
+---
+
+# 26. AI ADMIN ASSISTANT
+
+Create an AI-assisted admin dashboard.
+
+AI can help identify:
+
+- duplicate listings
+- spam
+- suspicious content
+- inappropriate content
+- low-quality listings
+- missing categories
+- possible duplicate accounts
+- suspicious activity patterns
+
+AI should recommend moderation actions.
+
+Do not automatically permanently ban users solely from an AI prediction.
+
+Use:
+
+AI recommendation → human/admin review → action.
+
+---
+
+# 27. TRUST & VERIFICATION
+
+Create professional trust indicators.
+
+Possible states:
+
+- Email Verified
+- Phone Verified
+- Identity Verified
+- Business Verified
+- Profile Complete
+- Trusted Seller
+
+Only display verification badges when verification actually happened.
+
+Never create fake verification.
+
+---
+
+# 28. REPUTATION SYSTEM
+
+For marketplace participants, consider:
+
+- completed transactions
+- response rate
+- response time
+- reviews
+- rating
+- profile completeness
+- verified status
+- account age
+
+Avoid unfair reputation scoring.
+
+Make important ranking factors explainable.
+
+---
+
+# 29. AI PERSONALIZED FEED
+
+Create intelligent feed recommendations.
+
+Feed can contain:
+
+- jobs
+- products
+- services
+- businesses
+- professional profiles
+- announcements
+
+Use legitimate behavioral signals.
+
+Allow users to control recommendations.
+
+Include:
+
+"Why am I seeing this?"
+
+---
+
+# 30. NOTIFICATION INTELLIGENCE
+
+Create AI-assisted notifications.
+
+Examples:
+
+"You may be a good match for this job."
+
+"A buyer may be interested in your product."
+
+"A new distributor matches your business category."
+
+"Your profile could be improved for 3 jobs."
+
+Notifications must not become spam.
+
+Allow users to control:
+
+- job alerts
+- marketplace alerts
+- recommendations
+- marketing notifications
+- AI notifications.
+
+---
+
+# 31. USER AI CONTROLS
+
+Users must be able to:
+
+- accept AI suggestion
+- reject AI suggestion
+- regenerate
+- edit
+- delete AI-generated content
+- disable recommendations
+- manage notification preferences
+- control profile visibility.
+
+AI must assist the user, not take away user control.
+
+---
+
+# 32. AI TRANSPARENCY
+
+Clearly label AI-assisted functionality.
+
+Examples:
+
+"AI Assisted"
+
+"AI Suggested"
+
+"Generated from your listing information"
+
+"Why am I seeing this?"
+
+"AI Match Explanation"
+
+Do not hide important AI decisions from users.
+
+---
+
+# 33. ETHIOPIAN UX
+
+The platform must feel genuinely useful for Ethiopia.
+
+Support:
+
+- Amharic
+- English
+- mixed-language input
+
+Design for:
+
+- mobile users
+- slower networks
+- lower bandwidth
+- image-heavy marketplace usage
+- Ethiopian phone-number formats
+- Addis Ababa and other Ethiopian locations
+- local business workflows.
+
+Do not make the UI feel like a generic foreign marketplace with Ethiopian text pasted on top.
+
+---
+
+# 34. ORTHODOX COMMUNITY BRANDING
+
+The platform can communicate its Orthodox community identity through:
+
+- tasteful visual motifs
+- Ethiopian-inspired patterns
+- subtle cross-inspired geometry where appropriate
+- professional blue
+- gold accents
+- Ethiopian visual identity
+
+Avoid excessive religious decoration.
+
+The platform must remain modern, trustworthy, professional, and inclusive in its product experience.
+
+---
+
+# 35. DESIGN SYSTEM
+
+Use a centralized design system.
+
+Colors:
+
+--primary: #123B6D
+--primary-dark: #08294F
+--gold: #D4A72C
+--gold-light: #F3D77A
+--background: #F8FAFC
+--surface: #FFFFFF
+--text: #172033
+--muted: #64748B
+--success: #16845B
+--error: #C0392B
+
+Use approximately:
+
+70% neutral/white
+
+20% blue
+
+8% supporting blue/light surfaces
+
+2% gold accents
+
+Do not randomly introduce colors.
+
+---
+
+# 36. PREMIUM UX
+
+The interface must include:
+
+- clean cards
+- strong typography
+- consistent spacing
+- professional forms
+- clear CTAs
+- excellent mobile navigation
+- skeleton loaders
+- empty states
+- error states
+- success states
+- confirmation dialogs
+- accessible controls
+- keyboard accessibility
+- responsive layouts
+- subtle animations
+- professional hover states.
+
+Avoid:
+
+- excessive gradients
+- excessive rounded cards
+- unnecessary animations
+- visual clutter
+- random colors
+- generic AI-looking UI.
+
+---
+
+# 37. HOME PAGE
+
+Create a premium homepage.
+
+Hero:
+
+Strong Ethiopian/Amharic message.
+
+Example concept:
+
+"ሥራ፣ ንግድ እና እድል በአንድ ቦታ"
+
+Supporting text:
+
+"አሠሪና ሠራተኛ፣ ገዢና ሻጭ፣ አስመጪና አከፋፋይ በቀላሉ የሚገናኙበት ዘመናዊ መድረክ።"
+
+Hero actions:
+
+[Find Jobs]
+
+[Find Products]
+
+[Advertise With AI]
+
+[Create Business Profile]
+
+Add global AI-powered search.
+
+---
+
+# 38. JOB MARKETPLACE
+
+Create:
+
+- job feed
+- filters
+- search
+- salary filter
+- location
+- work mode
+- experience
+- category
+- employment type
+- AI recommended jobs
+- saved jobs
+- application tracking.
+
+Job detail page:
+
+- company
+- title
+- description
+- requirements
+- responsibilities
+- location
+- salary if provided
+- employment type
+- AI match explanation
+- apply
+- save
+- share
+- report.
+
+---
+
+# 39. MARKETPLACE
+
+Create:
+
+- product feed
+- category navigation
+- search
+- filters
+- price
+- location
+- condition
+- seller information
+- recommendations
+- favorites
+- messaging.
+
+Product page:
+
+- image gallery
+- product information
+- seller profile
+- verification
+- price
+- location
+- AI recommendations
+- similar products
+- contact seller
+- report listing.
+
+---
+
+# 40. BUSINESS DIRECTORY
+
+Create:
+
+- business profiles
+- category
+- location
+- services
+- products
+- contact
+- verification
+- reviews
+- advertisements
+- jobs
+- business networking.
+
+---
+
+# 41. PROFESSIONAL DIRECTORY
+
+Users can create professional profiles.
+
+Include:
+
+- name
+- professional title
+- skills
+- experience
+- education
+- certifications
+- portfolio
+- projects
+- availability
+- location
+- contact preferences.
+
+AI can optimize the profile.
+
+---
+
+# 42. DASHBOARDS
+
+Create role-specific dashboards.
+
+### Job Seeker
+
+- recommended jobs
+- applications
+- saved jobs
+- profile strength
+- AI recommendations
+
+### Employer
+
+- posted jobs
+- applications
+- recommended candidates
+- AI matching
+- messages
+
+### Seller
+
+- products
+- inquiries
+- buyers
+- AI recommendations
+- content studio
+
+### Buyer
+
+- saved products
+- inquiries
+- recommendations
+
+### Business
+
+- products
+- jobs
+- services
+- leads
+- business connections
+- AI insights
+
+---
+
+# 43. AI DASHBOARD
+
+Create a dedicated AI Center.
+
+Sections:
+
+### AI Recommendations
+
+### AI Job Matching
+
+### AI Marketplace Matching
+
+### AI Content Studio
+
+### AI Profile Assistant
+
+### AI Business Insights
+
+### AI Search
+
+### AI Assistant
+
+Use a premium dashboard design.
+
+---
+
+# 44. CONTENT LIBRARY
+
+Create:
+
+## My AI Content
+
+Store:
+
+- generated posts
+- images
+- scripts
+- videos
+- drafts
+- templates
+- exported content.
+
+Allow:
+
+- edit
+- duplicate
+- regenerate
+- delete
+- download/export.
+
+---
+
+# 45. MESSAGING
+
+Create secure messaging between:
+
+- employer ↔ candidate
+- buyer ↔ seller
+- importer ↔ distributor
+- customer ↔ service provider
+- business ↔ business.
+
+Support:
+
+- text
+- listing references
+- job references
+- attachments where appropriate
+- unread states
+- notifications.
+
+Do not expose private information unnecessarily.
+
+---
+
+# 46. SECURITY
+
+Implement secure architecture.
+
+Never expose:
+
+- AI API keys
+- database credentials
+- secret tokens
+- server credentials
+
+in client-side code.
+
+Use:
+
+- server-side AI calls
+- environment variables
+- authorization
+- input validation
+- rate limiting
+- abuse prevention
+- secure file handling
+- permission checks
+- audit logs where appropriate.
+
+---
+
+# 47. PRIVACY
+
+AI should process only data necessary for the requested function.
+
+Do not send private documents to external AI providers unless necessary and properly authorized.
+
+Clearly communicate:
+
+- what AI processes
+- why it processes it
+- what is stored
+- what users can delete.
+
+---
+
+# 48. AI COST CONTROL
+
+Design the AI architecture for sustainable operating costs.
+
+Implement where appropriate:
+
+- caching
+- debouncing
+- request batching
+- token limits
+- image optimization
+- generation limits
+- rate limits
+- retry handling
+- model selection by task
+- asynchronous processing.
+
+Do not call expensive AI generation repeatedly for the same unchanged content.
+
+---
+
+# 49. AI PROVIDER ABSTRACTION
+
+Do not tightly couple the entire application to one AI provider.
+
+Create an abstraction such as:
+
+AIProvider
+
+with implementations capable of supporting future providers.
+
+Possible tasks:
+
+- text analysis
+- semantic search
+- embeddings
+- image generation
+- video generation
+- speech/voice generation.
+
+This makes future provider changes easier.
+
+---
+
+# 50. DATABASE ARCHITECTURE
+
+If necessary, introduce appropriate structures for:
+
+- AI generations
+- AI recommendations
+- match results
+- content drafts
+- generated assets
+- AI preferences
+- AI activity logs
+- semantic indexes
+- moderation recommendations.
+
+Do not create unnecessary duplicate data.
+
+Respect the existing database architecture.
+
+---
+
+# 51. PERFORMANCE
+
+Optimize for real-world Ethiopian internet conditions.
+
+Use:
+
+- lazy loading
+- image compression
+- responsive images
+- caching
+- pagination
+- efficient queries
+- optimistic UI where safe
+- skeleton loading
+- code splitting.
+
+Do not load large videos/images unnecessarily.
+
+---
+
+# 52. SEO
+
+Implement SEO where appropriate.
+
+Use:
+
+- metadata
+- Open Graph
+- structured data
+- canonical URLs
+- descriptive titles
+- search-friendly listing pages.
+
+Job and product pages should be shareable.
+
+---
+
+# 53. ERROR HANDLING
+
+Every AI operation must handle:
+
+- timeout
+- API failure
+- invalid response
+- rate limit
+- unavailable provider
+- malformed AI output
+- network failure.
+
+Show a professional message.
+
+Never leave users with a blank screen.
+
+---
+
+# 54. AI FAILURE FALLBACK
+
+If AI is unavailable:
+
+The platform must continue working.
+
+Users should still be able to:
+
+- create jobs
+- publish products
+- search
+- message
+- manage profiles
+- advertise manually.
+
+AI must enhance the platform, not become a single point of failure.
+
+---
+
+# 55. NO FAKE FEATURES
+
+This is critical.
+
+NEVER create buttons that pretend to work.
+
+NEVER display fake:
+
+- AI-generated videos
+- social media publishing
+- verification
+- payments
+- inventory
+- job applications
+- messages
+- analytics
+- user accounts.
+
+If a real external integration is unavailable:
+
+show the feature as:
+
+"Ready to connect"
+
+or provide a real export workflow.
+
+---
+
+# 56. TESTING
+
+Before considering the implementation complete, test:
+
+### Authentication
+
+- signup
+- login
+- logout
+- password recovery
+
+### Jobs
+
+- create
+- edit
+- publish
+- search
+- match
+- apply
+
+### Marketplace
+
+- create product
+- edit
+- publish
+- search
+- contact seller
+
+### AI
+
+- analyze job
+- improve listing
+- match candidate
+- recommend job
+- analyze product
+- generate content
+- generate social copy
+- generate video script
+- generate image prompt
+
+### Messaging
+
+- send
+- receive
+- notifications
+- unread state
+
+### Responsive
+
+- mobile
+- tablet
+- desktop.
+
+---
+
+# 57. QUALITY GATE
+
+Before finalizing, verify:
+
+- no broken routes
+- no console errors
+- no fake functionality
+- no placeholder content
+- no missing buttons
+- no dead-end workflows
+- no random colors
+- no inconsistent typography
+- no exposed API keys
+- no fabricated AI information
+- no fabricated verification
+- no fabricated social media publishing
+- no fabricated marketplace data.
+
+---
+
+# 58. IMPLEMENTATION STRATEGY
+
+Do NOT stop after designing the homepage.
+
+Work through the application systematically:
+
+PHASE 1
+Audit existing application.
+
+PHASE 2
+Establish design system.
+
+PHASE 3
+Improve core navigation and information architecture.
+
+PHASE 4
+Build job intelligence.
+
+PHASE 5
+Build candidate/job matching.
+
+PHASE 6
+Build marketplace intelligence.
+
+PHASE 7
+Build business/importer/distributor matching.
+
+PHASE 8
+Build AI semantic search.
+
+PHASE 9
+Build AI assistant.
+
+PHASE 10
+Build AI Content Studio.
+
+PHASE 11
+Build social media content generation.
+
+PHASE 12
+Build image/video generation architecture.
+
+PHASE 13
+Build dashboards.
+
+PHASE 14
+Build admin and moderation intelligence.
+
+PHASE 15
+Security and privacy hardening.
+
+PHASE 16
+Performance optimization.
+
+PHASE 17
+Responsive/mobile optimization.
+
+PHASE 18
+Full QA.
+
+---
+
+# 59. MOST IMPORTANT PRODUCT PRINCIPLE
+
+The platform should feel like:
+
+**LinkedIn + Upwork + Facebook Marketplace + business directory + AI creative studio**
+
+but adapted specifically for the Ethiopian market and the platform's Orthodox community identity.
+
+Do NOT copy another company's interface.
+
+Create an original product identity.
+
+---
+
+# 60. FINAL EXPERIENCE
+
+A user should be able to enter the platform and immediately understand:
+
+"I can find a job."
+
+"I can hire someone."
+
+"I can sell something."
+
+"I can buy something."
+
+"I can advertise my business."
+
+"I can find a service provider."
+
+"I can find a business partner."
+
+"I can use AI to improve my listing."
+
+"I can use AI to find the right person."
+
+"I can use AI to create professional advertising content."
+
+"I can prepare content for Telegram, Facebook, Instagram, TikTok and LinkedIn."
+
+This must be obvious from the interface.
+
+---
+
+# FINAL COMMAND
+
+Now inspect the existing application and implement the above architecture as deeply as the existing stack allows.
+
+Do not give me a superficial redesign.
+
+Do not only create mockups.
+
+Do not stop at the homepage.
+
+Do not replace working functionality unnecessarily.
+
+Do not invent data.
+
+Do not fabricate integrations.
+
+Do not expose secrets.
+
+Build the missing functionality progressively and intelligently.
+
+Where a real external service is required but not currently configured, build the correct abstraction, UI, data flow, validation, error handling, and export/fallback workflow so the service can be connected later.
+
+The final result must be:
+
+**PRODUCTION-ORIENTED**
+**AI-POWERED**
+**MOBILE-FIRST**
+**ETHIOPIA-READY**
+**AMHARIC + ENGLISH**
+**SECURE**
+**SCALABLE**
+**ACCESSIBLE**
+**PROFESSIONAL**
+**TRUSTWORTHY**
+**ORIGINAL**
+**AND FULLY INTEGRATED WITH THE EXISTING APPLICATION.**
+
+Do not merely describe what should be built.
+
+**Inspect, implement, integrate, test, fix, and polish the application.**

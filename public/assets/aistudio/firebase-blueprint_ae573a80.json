@@ -1,0 +1,203 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account and profile information on the Orthodox Tewahido & Economy platform",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "email": { "type": "string" },
+        "fullName": { "type": "string" },
+        "username": { "type": "string" },
+        "primaryRole": { "type": "string" },
+        "secondaryRoles": { "type": "string" },
+        "profession": { "type": "string" },
+        "businessName": { "type": "string" },
+        "businessCategory": { "type": "string" },
+        "location": { "type": "string" },
+        "phone": { "type": "string" },
+        "bio": { "type": "string" },
+        "skills": { "type": "string" },
+        "telegramHandle": { "type": "string" },
+        "profilePhotoUrl": { "type": "string" },
+        "verificationStatus": { "type": "string" },
+        "rating": { "type": "number" },
+        "reviewCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "email", "fullName", "primaryRole"]
+    },
+    "Job": {
+      "title": "Job",
+      "description": "Freelance job posting with title, budget, description, and client details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "employerId": { "type": "string" },
+        "employerName": { "type": "string" },
+        "employerEmail": { "type": "string" },
+        "employerVerified": { "type": "boolean" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "description": { "type": "string" },
+        "budget": { "type": "number" },
+        "budgetAmount": { "type": "number" },
+        "category": { "type": "string" },
+        "location": { "type": "string" },
+        "skillsRequired": { "type": "string" },
+        "projectType": { "type": "string" },
+        "status": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "deadline": { "type": "string" },
+        "proposalsCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "employerId", "title", "description", "budget"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Marketplace product listing posted by verified/orthodox sellers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sellerId": { "type": "string" },
+        "sellerName": { "type": "string" },
+        "sellerVerified": { "type": "boolean" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "priceUSD": { "type": "number" },
+        "currency": { "type": "string" },
+        "quantity": { "type": "integer" },
+        "location": { "type": "string" },
+        "condition": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "isAvailable": { "type": "boolean" },
+        "deliveryInfo": { "type": "string" },
+        "moq": { "type": "integer" },
+        "wholesalePrice": { "type": "number" },
+        "isFeatured": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "sellerId", "sellerName", "title", "price", "category"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Professional freelance service offering browsable by category",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "providerId": { "type": "string" },
+        "providerName": { "type": "string" },
+        "providerEmail": { "type": "string" },
+        "isVerified": { "type": "boolean" },
+        "title": { "type": "string" },
+        "amharicTitle": { "type": "string" },
+        "category": { "type": "string" },
+        "rateDescription": { "type": "string" },
+        "rateAmount": { "type": "number" },
+        "location": { "type": "string" },
+        "description": { "type": "string" },
+        "experienceYears": { "type": "integer" },
+        "phone": { "type": "string" },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "integer" },
+        "isAvailable": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "providerId", "title", "category"]
+    },
+    "Proposal": {
+      "title": "Proposal",
+      "description": "Freelance bid on an active project listing",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "jobId": { "type": "string" },
+        "jobTitle": { "type": "string" },
+        "freelancerId": { "type": "string" },
+        "freelancerName": { "type": "string" },
+        "coverLetter": { "type": "string" },
+        "bidAmount": { "type": "number" },
+        "deliveryDays": { "type": "integer" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "jobId", "freelancerId", "bidAmount", "coverLetter"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "Real-time communication thread between clients and freelancers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "participants": { "type": "array", "items": { "type": "string" } },
+        "participant1Id": { "type": "string" },
+        "participant1Name": { "type": "string" },
+        "participant2Id": { "type": "string" },
+        "participant2Name": { "type": "string" },
+        "projectId": { "type": "string" },
+        "projectTitle": { "type": "string" },
+        "lastMessage": { "type": "string" },
+        "lastMessageSenderId": { "type": "string" },
+        "lastMessageTimestamp": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "participants", "participant1Id", "participant2Id"]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "Individual message within a conversation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "conversationId": { "type": "string" },
+        "senderId": { "type": "string" },
+        "senderName": { "type": "string" },
+        "receiverId": { "type": "string" },
+        "content": { "type": "string" },
+        "projectTitle": { "type": "string" },
+        "isRead": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "conversationId", "senderId", "receiverId", "content"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles indexed by authenticated user ID"
+    },
+    "/jobs/{jobId}": {
+      "schema": "Job",
+      "description": "Freelance job postings from authenticated employers"
+    },
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Public marketplace product listings"
+    },
+    "/services/{serviceId}": {
+      "schema": "Service",
+      "description": "Public professional services catalog filterable by category"
+    },
+    "/proposals/{proposalId}": {
+      "schema": "Proposal",
+      "description": "Freelance project proposals submitted by bidders"
+    },
+    "/conversations/{conversationId}": {
+      "schema": "Conversation",
+      "description": "Project conversation channels between freelancers and employers"
+    },
+    "/conversations/{conversationId}/messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "Real-time project messages with read-receipt status"
+    }
+  }
+}

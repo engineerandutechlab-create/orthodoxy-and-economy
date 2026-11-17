@@ -1,0 +1,161 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isSuperAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'andupaman3@gmail.com' ||
+        request.auth.token.email == 'habtamweday1@gmail.com' ||
+        request.auth.token.email == 'admin@orthodoxy.et'
+      );
+    }
+
+    // 1. Users collection (Profiles, roles, verification status)
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if isOwner(userId) || isSuperAdmin();
+      allow delete: if isSuperAdmin();
+
+      match /completed_jobs/{jobId} {
+        allow read: if true;
+        allow create: if isSignedIn();
+        allow update: if isOwner(userId) || isSuperAdmin();
+        allow delete: if isOwner(userId) || isSuperAdmin();
+      }
+
+      match /notifications/{notifId} {
+        allow read: if isOwner(userId) || isSuperAdmin();
+        allow create: if isSignedIn();
+        allow update: if isOwner(userId) || isSuperAdmin();
+        allow delete: if isOwner(userId) || isSuperAdmin();
+      }
+    }
+
+    // Top-level notifications collection (Android/Web dual sync)
+    match /notifications/{notifId} {
+      allow read: if (isSignedIn() && resource.data.userId == request.auth.uid) || isSuperAdmin();
+      allow create: if isSignedIn();
+      allow update: if (isSignedIn() && resource.data.userId == request.auth.uid) || isSuperAdmin();
+      allow delete: if (isSignedIn() && resource.data.userId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // 2. Jobs collection (Postings and hiring)
+    match /jobs/{jobId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if (isSignedIn() && resource.data.employerId == request.auth.uid) || isSuperAdmin() || (isSignedIn() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['proposalsCount']));
+      allow delete: if (isSignedIn() && resource.data.employerId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // 3. Gigs collection (Freelancer gig services)
+    match /gigs/{gigId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if (isSignedIn() && (resource.data.providerId == request.auth.uid || resource.data.employerId == request.auth.uid)) || isSuperAdmin() || (isSignedIn() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['proposalsCount']));
+      allow delete: if (isSignedIn() && (resource.data.providerId == request.auth.uid || resource.data.employerId == request.auth.uid)) || isSuperAdmin();
+    }
+
+    // 4. Products collection (Marketplace items, crafts, beeswax)
+    match /products/{productId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if (isSignedIn() && resource.data.sellerId == request.auth.uid) || isSuperAdmin();
+      allow delete: if (isSignedIn() && resource.data.sellerId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // 5. Services collection (Professional service directory)
+    match /services/{serviceId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if (isSignedIn() && resource.data.providerId == request.auth.uid) || isSuperAdmin();
+      allow delete: if (isSignedIn() && resource.data.providerId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // Businesses collection (B2B Directory)
+    match /businesses/{businessId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if (isSignedIn() && resource.data.ownerId == request.auth.uid) || isSuperAdmin();
+      allow delete: if (isSignedIn() && resource.data.ownerId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // Reviews collection (Post-service & product ratings)
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if (isSignedIn() && resource.data.authorId == request.auth.uid) || isSuperAdmin();
+      allow delete: if (isSignedIn() && resource.data.authorId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // 6. Reports collection (Content moderation reports)
+    match /reports/{reportId} {
+      allow read: if isSuperAdmin();
+      allow create: if isSignedIn();
+      allow update: if isSuperAdmin();
+      allow delete: if isSuperAdmin();
+    }
+
+    // Proposals collection
+    match /proposals/{proposalId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && (resource.data.freelancerId == request.auth.uid || resource.data.employerId == request.auth.uid || isSuperAdmin());
+      allow delete: if (isSignedIn() && resource.data.freelancerId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // 7. Conversations & Messages (Real-time chat)
+    match /conversations/{conversationId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() || isSuperAdmin();
+      allow delete: if isSuperAdmin();
+
+      match /messages/{messageId} {
+        allow read: if true;
+        allow create: if isSignedIn();
+        allow update: if isSignedIn() || isSuperAdmin();
+        allow delete: if (isSignedIn() && resource.data.senderId == request.auth.uid) || isSuperAdmin();
+      }
+    }
+
+    // Top-level messages collection (used by mobile apps for direct queries)
+    match /messages/{messageId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() || isSuperAdmin();
+      allow delete: if (isSignedIn() && resource.data.senderId == request.auth.uid) || isSuperAdmin();
+    }
+
+    // Community Prayers & Comments
+    match /prayers/{prayerId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() || isSuperAdmin();
+      allow delete: if (isSignedIn() && (resource.data.userId == request.auth.uid || resource.data.authorId == request.auth.uid)) || isSuperAdmin();
+
+      match /comments/{commentId} {
+        allow read: if true;
+        allow create: if isSignedIn();
+        allow update: if (isSignedIn() && resource.data.authorId == request.auth.uid) || isSuperAdmin();
+        allow delete: if (isSignedIn() && resource.data.authorId == request.auth.uid) || isSuperAdmin();
+      }
+    }
+
+    // Community Success Stories
+    match /success_stories/{storyId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() || isSuperAdmin();
+      allow delete: if (isSignedIn() && (resource.data.userId == request.auth.uid || resource.data.authorId == request.auth.uid)) || isSuperAdmin();
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --primary-blue: #123B6D;
+    --navy-blue: #08294F;
+    --royal-purple: #3B1C54;
+    --liturgical-purple: #4A154B;
+    --imperial-purple: #581C87;
+    --purple-accent: #7E22CE;
+    --orthodox-gold: #D4A72C;
+    --orthodox-gold-light: #F3D77A;
+    --surface-bg: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --text-primary: #172033;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --border-subtle: #E2E8F0;
+  }
+
+  .dark {
+    --surface-bg: #0B1120;
+    --surface-card: #111827;
+    --text-primary: #F1F5F9;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --border-subtle: #1E293B;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--surface-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Optimize Ethiopic typography line-height and legibility */
+  [lang="am"], .font-ethiopic {
+    font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+  }
+}
+
+/* Global Dark Mode Surfaces for shared Tailwind components */
+.dark body {
+  background-color: #0B1120;
+  color: #F1F5F9;
+}
+
+.dark .bg-white {
+  background-color: #111827;
+}
+
+.dark .bg-white\/95,
+.dark .bg-white\/90 {
+  background-color: rgba(17, 24, 39, 0.95);
+}
+
+.dark .bg-slate-50,
+.dark .bg-\[\#F8FAFC\],
+.dark .bg-\[\#FBFBFE\] {
+  background-color: #0F172A;
+}
+
+.dark .bg-slate-100 {
+  background-color: #1E293B;
+}
+
+.dark .border-slate-200,
+.dark .border-slate-200\/80,
+.dark .border-slate-200\/90,
+.dark .border-slate-100,
+.dark .border-\[\#E2E8F0\] {
+  border-color: #1E293B;
+}
+
+.dark .text-slate-900,
+.dark .text-\[\#08294F\],
+.dark .text-\[\#172033\] {
+  color: #F1F5F9;
+}
+
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-\[\#123B6D\] {
+  color: #E2E8F0;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #94A3B8;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #0F172A;
+  color: #F1F5F9;
+  border-color: #334155;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748B;
+}
+
+/* Subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Royal Orthodox Blue & Imperial Purple Ribbon Border */
+.orthodox-ribbon-border {
+  border-image: linear-gradient(to right, #123B6D 0%, #4A154B 35%, #D4A72C 50%, #4A154B 65%, #123B6D 100%) 1;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4A72C 0%, #F3D77A 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-royal-gradient {
+  background: linear-gradient(135deg, #091B33 0%, #1A0B2E 50%, #2E0854 100%);
+}
+
+.bg-blue-purple-gradient {
+  background: linear-gradient(135deg, #123B6D 0%, #3B1C54 50%, #581C87 100%);
+}

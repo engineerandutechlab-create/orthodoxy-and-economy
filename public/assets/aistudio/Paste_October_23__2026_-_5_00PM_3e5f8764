@@ -1,0 +1,1908 @@
+
+# MASTER ROLE
+
+Act as a **Principal AI Systems Architect, Senior Full-Stack Engineer, RAG/Knowledge-Base Engineer, AI Agent Engineer, Multimedia AI Architect, Automation Engineer, UX/UI Director, Security Engineer, and Ethiopian Orthodox Knowledge-System Architect**.
+
+You are upgrading an existing production web application.
+
+The application must become a complete:
+
+# ORTHODOX AI KNOWLEDGE + EMPLOYMENT + MARKETPLACE + BUSINESS + AUTOMATION PLATFORM
+
+This is NOT a simple chatbot.
+
+This is NOT a UI mockup.
+
+This is NOT a static website.
+
+Build a real, integrated AI operating layer inside the existing platform.
+
+---
+
+# 1. CRITICAL FIRST STEP — UNDERSTAND THE EXISTING APPLICATION
+
+Before changing anything:
+
+- inspect the entire codebase
+- inspect all routes
+- inspect frontend
+- inspect backend
+- inspect database
+- inspect authentication
+- inspect existing AI features
+- inspect file upload functionality
+- inspect storage
+- inspect messaging
+- inspect dashboards
+- inspect existing marketplace
+- inspect jobs
+- inspect profiles
+- inspect existing APIs
+- inspect existing components
+- inspect environment configuration
+
+Identify what already works.
+
+Do NOT unnecessarily replace working architecture.
+
+Do NOT create duplicate systems.
+
+Do NOT create fake functionality.
+
+If something already exists, extend it properly.
+
+If something is incomplete, repair it.
+
+If something is missing, implement it.
+
+---
+
+# 2. CORE ARCHITECTURE
+
+The platform should have these major AI subsystems:
+
+```text
+AI ORCHESTRATOR
+│
+├── Orthodox Knowledge Engine
+├── RAG Engine
+├── File Intelligence Engine
+├── Job Intelligence Engine
+├── Marketplace Intelligence Engine
+├── Business Matching Engine
+├── Semantic Search Engine
+├── AI Assistant
+├── Content Generation Engine
+├── Image Generation Engine
+├── Video Generation Pipeline
+├── Voice/Audio Engine
+├── Telegram Content Engine
+├── Social Media Content Engine
+├── Automation Engine
+├── Recommendation Engine
+├── Moderation Engine
+└── Analytics/Insight Engine
+```
+
+All AI functionality must be accessed through a clean service architecture.
+
+Do NOT scatter uncontrolled AI calls throughout the application.
+
+---
+
+# 3. UNIVERSAL AI ASSISTANT
+
+Create a powerful central AI assistant.
+
+Name it appropriately according to the application's branding.
+
+The assistant must understand the context of the platform.
+
+Users can ask:
+
+- Orthodox religious questions
+- Bible questions
+- theological questions
+- history questions
+- calendar questions
+- prayer-related informational questions
+- employment questions
+- marketplace questions
+- business questions
+- content-generation requests
+- document-analysis requests
+- translation requests
+- summarization requests
+- educational questions
+
+The assistant must understand:
+
+- Amharic
+- English
+- mixed Amharic-English
+
+---
+
+# 4. ORTHODOX KNOWLEDGE ENGINE
+
+Create a dedicated:
+
+# ORTHODOX KNOWLEDGE ENGINE
+
+The system should be designed to work with authoritative Orthodox knowledge sources supplied by the platform administrators.
+
+Potential knowledge categories:
+
+- Holy Bible
+- Orthodox theological writings
+- approved doctrinal documents
+- canon/የቀኖና መጻሕፍት
+- Church history
+- teachings
+- liturgical materials
+- prayers
+- hymns where legally permitted
+- saints
+- feasts
+- fasting information
+- Ethiopian Orthodox calendar information
+- church educational materials
+- approved books
+- approved PDFs/documents
+- approved educational videos
+- approved audio materials.
+
+IMPORTANT:
+
+Do NOT allow the AI to invent Orthodox doctrine.
+
+Do NOT treat arbitrary internet content as authoritative doctrine.
+
+---
+
+# 5. ORTHODOX RAG SYSTEM
+
+Implement a Retrieval-Augmented Generation architecture.
+
+Workflow:
+
+```text
+USER QUESTION
+↓
+LANGUAGE DETECTION
+↓
+QUERY UNDERSTANDING
+↓
+KNOWLEDGE RETRIEVAL
+↓
+SOURCE RANKING
+↓
+RELEVANT PASSAGES
+↓
+AI REASONING
+↓
+ANSWER
+↓
+SOURCE CITATIONS
+```
+
+The AI should answer primarily from approved knowledge sources.
+
+Whenever possible, show:
+
+- source title
+- book/document name
+- chapter/section
+- page where available
+- source reference.
+
+Example UI:
+
+**Answer**
+
+...
+
+**Sources**
+
+📖 Holy Bible — Book / Chapter / Verse
+
+📚 Approved Orthodox Teaching — Section
+
+📜 Church Canon — Reference
+
+---
+
+# 6. SOURCE AUTHORITY LEVELS
+
+Create a source hierarchy.
+
+Example:
+
+LEVEL 1 — Primary/authoritative sources
+
+- approved Holy Scripture
+- officially approved doctrinal material
+- officially approved canonical materials
+
+LEVEL 2 — Approved Orthodox educational resources
+
+LEVEL 3 — Curated scholarly/reference resources
+
+LEVEL 4 — General informational resources
+
+The AI should prioritize higher-authority sources.
+
+Do NOT silently treat Level 4 information as official doctrine.
+
+---
+
+# 7. KNOWLEDGE BASE ADMINISTRATION
+
+Create an administrator interface:
+
+# Orthodox Knowledge Base
+
+Admin can:
+
+- upload documents
+- upload books
+- upload PDFs
+- upload DOC/DOCX
+- upload TXT
+- upload images
+- upload audio
+- upload video
+- create knowledge categories
+- add source metadata
+- assign authority level
+- add author
+- add publication information
+- add language
+- add tags
+- update documents
+- archive documents
+- delete documents
+- re-index documents.
+
+---
+
+# 8. DOCUMENT INGESTION PIPELINE
+
+When an administrator uploads a document:
+
+```text
+UPLOAD
+↓
+FILE VALIDATION
+↓
+VIRUS/SECURITY CHECK
+↓
+TEXT EXTRACTION
+↓
+OCR IF NECESSARY
+↓
+LANGUAGE DETECTION
+↓
+DOCUMENT CLEANING
+↓
+CHUNKING
+↓
+METADATA EXTRACTION
+↓
+EMBEDDING
+↓
+VECTOR INDEX
+↓
+KNOWLEDGE BASE
+```
+
+Do not simply store the file.
+
+Make its content searchable.
+
+---
+
+# 9. FILE UPLOAD CENTER
+
+Create a professional:
+
+# AI FILE CENTER
+
+Users should be able to upload supported files.
+
+Support, where technically available:
+
+### Documents
+
+- PDF
+- DOC
+- DOCX
+- TXT
+- RTF
+
+### Presentations
+
+- PPT
+- PPTX
+
+### Spreadsheets
+
+- XLS
+- XLSX
+- CSV
+
+### Images
+
+- JPG
+- JPEG
+- PNG
+- WEBP
+
+### Audio
+
+- MP3
+- WAV
+- M4A
+- other supported formats
+
+### Video
+
+- MP4
+- WEBM
+- MOV
+- other supported formats.
+
+The application must validate actual file type and size.
+
+---
+
+# 10. FILE AI ACTIONS
+
+After uploading a file, provide:
+
+### Ask AI
+
+### Summarize
+
+### Explain
+
+### Translate
+
+### Extract Text
+
+### Extract Key Points
+
+### Create Questions
+
+### Create Answers
+
+### Create Study Notes
+
+### Create Presentation Outline
+
+### Create Social Media Content
+
+### Create Telegram Post
+
+### Create Video Script
+
+### Analyze Document
+
+### Compare With Another File
+
+### Search Inside File
+
+### Generate Report
+
+### Generate Quiz
+
+### Generate Flashcards
+
+### Create Educational Material
+
+### Create Advertisement
+
+### Extract Tables
+
+### Extract Important Dates
+
+### Extract Names/Entities
+
+---
+
+# 11. MULTI-FILE ANALYSIS
+
+Allow users to upload multiple documents.
+
+Example:
+
+User uploads:
+
+- Bible study PDF
+- theological document
+- church history document
+
+Then asks:
+
+"Compare these documents."
+
+AI should analyze the uploaded files together.
+
+Provide:
+
+- similarities
+- differences
+- key concepts
+- source references
+- conflicts
+- uncertainty.
+
+Do NOT invent missing information.
+
+---
+
+# 12. IMAGE INTELLIGENCE
+
+When users upload an image:
+
+AI may:
+
+- describe the image
+- OCR text
+- translate text
+- analyze document scans
+- identify visible objects where appropriate
+- extract structured information
+- answer questions about the image.
+
+For religious artwork or icons, describe carefully and avoid inventing historical claims.
+
+---
+
+# 13. VIDEO INTELLIGENCE
+
+When users upload a video:
+
+Where supported:
+
+- extract audio
+- transcribe speech
+- identify language
+- summarize
+- generate chapters
+- extract important points
+- create captions
+- translate captions
+- create social-media clips/scripts
+- create Telegram-ready text
+- generate educational notes.
+
+Do not claim analysis was completed if the video could not actually be processed.
+
+---
+
+# 14. AUDIO INTELLIGENCE
+
+For uploaded audio:
+
+- speech-to-text
+- transcription
+- summary
+- translation
+- topic extraction
+- speaker segmentation where supported
+- educational notes
+- social media content
+- Telegram content.
+
+---
+
+# 15. ORTHODOX AI CHAT MODES
+
+The AI assistant should have selectable modes:
+
+### Orthodox Knowledge
+
+For approved Orthodox sources.
+
+### Bible Study
+
+For Scripture-focused study.
+
+### Theology
+
+For theological educational discussion.
+
+### Church History
+
+For historical questions.
+
+### Calendar
+
+For Ethiopian Orthodox calendar information.
+
+### Education
+
+For learning materials.
+
+### General Assistant
+
+For non-religious platform tasks.
+
+### Business Assistant
+
+For jobs, products, services and business.
+
+### Content Creator
+
+For advertising and social media content.
+
+This prevents every question from being treated as a religious question.
+
+---
+
+# 16. ANSWER SAFETY & SOURCE DISCIPLINE
+
+When the knowledge base does not contain enough evidence:
+
+Say clearly:
+
+"I could not find sufficient information in the approved knowledge sources."
+
+Then optionally explain what additional source is needed.
+
+Do NOT fabricate citations.
+
+Do NOT invent Bible verses.
+
+Do NOT invent canon references.
+
+Do NOT invent church teachings.
+
+Do NOT claim that a source says something when it does not.
+
+---
+
+# 17. ORTHODOX KNOWLEDGE SEARCH
+
+Create semantic search across:
+
+- books
+- documents
+- Bible
+- teachings
+- historical materials
+- uploaded files
+- educational resources.
+
+Search should understand:
+
+Amharic
+
+English
+
+mixed-language queries.
+
+Example:
+
+"ስለ ጾም የሚናገረውን አስተምረኝ"
+
+should retrieve relevant knowledge.
+
+---
+
+# 18. BIBLE SEARCH
+
+Create a dedicated Bible search.
+
+Support:
+
+- book
+- chapter
+- verse
+- keyword
+- topic
+- Amharic search
+- English search.
+
+Provide citations.
+
+Do not fabricate verse text.
+
+If full Bible text licensing/copyright is an issue, use legally authorized content and references.
+
+---
+
+# 19. AI STUDY MODE
+
+Users should be able to say:
+
+"Teach me this topic."
+
+AI creates:
+
+1. Introduction
+2. Key concepts
+3. Source references
+4. Explanation
+5. Questions
+6. Answers
+7. Summary
+8. Further reading.
+
+Support beginner/intermediate/advanced levels.
+
+---
+
+# 20. AI EDUCATIONAL CONTENT GENERATOR
+
+From an uploaded document, generate:
+
+- lesson
+- study guide
+- quiz
+- multiple-choice questions
+- true/false questions
+- flashcards
+- summary
+- presentation outline
+- teacher notes
+- student notes.
+
+---
+
+# 21. AI CONTENT STUDIO
+
+Create:
+
+# AI CONTENT STUDIO
+
+Users can select:
+
+SOURCE:
+
+- Job
+- Product
+- Service
+- Business
+- Document
+- Video
+- Audio
+- Image
+- Orthodox Knowledge Topic
+- Announcement
+- Event
+
+OUTPUT:
+
+- Social post
+- Image
+- Video
+- Telegram post
+- TikTok package
+- Facebook package
+- Instagram package
+- LinkedIn package
+- WhatsApp package
+- YouTube package.
+
+---
+
+# 22. ONE-CLICK CONTENT AUTOMATION
+
+Add:
+
+# CREATE CONTENT FOR EVERYTHING
+
+When selected, AI should generate a complete content package.
+
+Example:
+
+INPUT:
+
+Product listing.
+
+OUTPUT:
+
+### Facebook
+Caption + image concept
+
+### Instagram
+Caption + hashtags + image
+
+### Telegram
+Ready-to-copy post
+
+### TikTok
+Hook + script + scenes + captions
+
+### YouTube Shorts
+Short script + title + description
+
+### WhatsApp
+Short promotional message
+
+### LinkedIn
+Professional business post.
+
+---
+
+# 23. AI IMAGE CREATOR
+
+Create real image-generation integration where available.
+
+User selects:
+
+- product
+- job
+- service
+- business
+- Orthodox educational topic
+- event
+- announcement.
+
+Generate professional visual concepts.
+
+Support:
+
+1:1
+
+4:5
+
+9:16
+
+16:9
+
+Do not fabricate factual information.
+
+Text shown inside generated images should be based on verified user data.
+
+---
+
+# 24. AI VIDEO CREATOR
+
+Create a complete video pipeline.
+
+INPUT:
+
+Any supported source.
+
+PROCESS:
+
+```text
+SOURCE
+↓
+AI ANALYSIS
+↓
+SCRIPT
+↓
+HOOK
+↓
+STORYBOARD
+↓
+SCENE GENERATION
+↓
+VOICEOVER
+↓
+SUBTITLES
+↓
+BACKGROUND MUSIC
+↓
+BRANDING
+↓
+VIDEO COMPOSITION
+↓
+PREVIEW
+↓
+EXPORT
+```
+
+Support:
+
+### TikTok
+
+9:16
+
+### Reels
+
+9:16
+
+### Shorts
+
+9:16
+
+### Facebook
+
+1:1 / 4:5 / 16:9
+
+### Telegram
+
+9:16 / 16:9 depending on content.
+
+If no real video generation service is configured, build the complete pipeline interface and produce the actual script/storyboard/assets that can be exported or passed to a configured provider.
+
+NEVER fake a completed video.
+
+---
+
+# 25. AI VOICEOVER
+
+Where a real speech-generation provider is configured:
+
+Generate:
+
+- Amharic voice
+- English voice
+- mixed language where supported.
+
+Controls:
+
+- male/female where provider supports it
+- speed
+- tone
+- style
+- pronunciation controls where available.
+
+If a voice provider is unavailable, provide downloadable voiceover script rather than pretending audio was generated.
+
+---
+
+# 26. TELEGRAM CONTENT ENGINE
+
+Create a dedicated:
+
+# TELEGRAM STUDIO
+
+Generate:
+
+- title
+- formatted message
+- emoji structure
+- CTA
+- source/reference when appropriate
+- image concept
+- video concept
+- hashtags where useful.
+
+Buttons:
+
+COPY
+
+EDIT
+
+DOWNLOAD
+
+SHARE
+
+SCHEDULE
+
+POST
+
+Important:
+
+POST and SCHEDULE must only be enabled when a real Telegram integration is configured.
+
+Otherwise use:
+
+COPY / EXPORT.
+
+Never fake Telegram publishing.
+
+---
+
+# 27. TELEGRAM BOT ARCHITECTURE
+
+Where the platform owner configures a legitimate Telegram Bot/API integration, support:
+
+- channel posting
+- group posting where authorized
+- scheduled posts
+- media posting
+- captions
+- automated announcements.
+
+Use secure server-side credentials.
+
+Never expose bot tokens in the browser.
+
+---
+
+# 28. AUTOMATION ENGINE
+
+Create:
+
+# AI AUTOMATION CENTER
+
+Users/admins can create workflows such as:
+
+```text
+WHEN
+a new job is published
+
+THEN
+AI analyzes job
+
+THEN
+find matching candidates
+
+THEN
+notify relevant users
+
+THEN
+generate promotional content
+
+THEN
+prepare Telegram post
+
+THEN
+prepare social media content
+```
+
+Another workflow:
+
+```text
+WHEN
+a new product is published
+
+THEN
+AI analyzes product
+
+THEN
+improve listing
+
+THEN
+find potential buyers
+
+THEN
+generate advertisement
+
+THEN
+prepare Telegram content
+
+THEN
+prepare TikTok script
+```
+
+Another:
+
+```text
+WHEN
+new Orthodox educational material is uploaded
+
+THEN
+extract text
+
+THEN
+index knowledge
+
+THEN
+generate summary
+
+THEN
+generate study notes
+
+THEN
+generate Telegram educational post
+
+THEN
+generate social media content
+```
+
+---
+
+# 29. VISUAL AUTOMATION BUILDER
+
+Create a workflow builder.
+
+Nodes:
+
+- Trigger
+- AI Analyze
+- Search
+- Match
+- Generate Text
+- Generate Image
+- Generate Video
+- Generate Audio
+- Send Notification
+- Send Email
+- Telegram
+- Save
+- Human Approval
+- Publish
+- Delay
+- Condition.
+
+Use a visual workflow interface where technically appropriate.
+
+---
+
+# 30. HUMAN APPROVAL
+
+For sensitive actions, require approval.
+
+Examples:
+
+- publishing public content
+- Telegram posting
+- sending bulk messages
+- deleting content
+- moderation actions
+- business announcements.
+
+Workflow:
+
+AI creates → User/Admin reviews → Approve → Publish.
+
+Allow fully automatic workflows only for low-risk operations.
+
+---
+
+# 31. CONTENT CALENDAR
+
+Create:
+
+# AI CONTENT CALENDAR
+
+Users can schedule:
+
+- Telegram posts
+- social media content
+- job advertisements
+- product advertisements
+- educational content
+- business announcements.
+
+Calendar views:
+
+- day
+- week
+- month.
+
+Show:
+
+Draft
+
+Scheduled
+
+Published
+
+Failed
+
+Needs Approval
+
+---
+
+# 32. AI CONTENT REPURPOSING
+
+One source should become many formats.
+
+Example:
+
+Upload a 10-minute educational video.
+
+AI creates:
+
+- full summary
+- short summary
+- Telegram post
+- Facebook post
+- Instagram caption
+- TikTok script
+- YouTube Shorts script
+- quote cards
+- study questions
+- article outline.
+
+This should be one of the platform's strongest features.
+
+---
+
+# 33. FILE → CONTENT AUTOMATION
+
+Add:
+
+# TURN FILE INTO CONTENT
+
+Example:
+
+Upload PDF.
+
+AI automatically creates:
+
+- summary
+- educational post
+- Telegram post
+- Facebook post
+- Instagram caption
+- TikTok script
+- video script
+- quiz
+- study guide.
+
+User can select:
+
+CREATE ALL
+
+or choose individual outputs.
+
+---
+
+# 34. ORTHODOX EDUCATIONAL CONTENT AUTOMATION
+
+For approved Orthodox educational sources:
+
+PDF/Document → AI
+
+AI generates:
+
+- educational summary
+- Bible study
+- teaching points
+- Telegram post
+- social media post
+- video script
+- short-form video script
+- quiz
+- flashcards.
+
+All generated theological content must remain grounded in the selected approved source.
+
+---
+
+# 35. CONTENT QUALITY CONTROL
+
+Before publishing generated content, run:
+
+1. factual consistency check
+2. source consistency check
+3. spelling check
+4. language check
+5. formatting check
+6. prohibited-content check
+7. hallucination-risk check.
+
+For Orthodox content:
+
+Verify generated claims against retrieved approved sources.
+
+---
+
+# 36. AI MODERATION
+
+Create AI-assisted moderation for:
+
+- spam
+- scams
+- malicious links
+- inappropriate content
+- duplicate listings
+- misleading advertisements
+- suspicious activity.
+
+AI should recommend action.
+
+Human review should remain available.
+
+---
+
+# 37. EMPLOYMENT AI
+
+Preserve and integrate all previously defined employment features:
+
+- job analysis
+- CV/profile analysis
+- candidate matching
+- job recommendations
+- employer recommendations
+- explainable matching
+- semantic search
+- AI application assistance.
+
+---
+
+# 38. MARKETPLACE AI
+
+Preserve and integrate:
+
+- product analysis
+- buyer/seller matching
+- importer/distributor matching
+- service provider matching
+- natural language search
+- recommendations
+- AI advertising.
+
+---
+
+# 39. AI SEARCH
+
+Create one universal search box.
+
+User can type:
+
+"Find me a remote Python job."
+
+"ስለ ጾም የሚናገሩ መጻሕፍት ፈልግ"
+
+"Find laptop sellers."
+
+"Create a Telegram advertisement for this product."
+
+"Explain this PDF."
+
+The system should understand the intent and route the request to the correct AI subsystem.
+
+---
+
+# 40. AI ORCHESTRATOR
+
+Implement an AI orchestration layer.
+
+Example:
+
+```text
+USER REQUEST
+↓
+INTENT CLASSIFICATION
+↓
+ROUTE TO CORRECT ENGINE
+↓
+RETRIEVE DATA
+↓
+AI PROCESSING
+↓
+VALIDATION
+↓
+ACTION
+↓
+RESULT
+```
+
+Possible intents:
+
+- ORTHODOX_QA
+- BIBLE_SEARCH
+- FILE_ANALYSIS
+- JOB_SEARCH
+- JOB_MATCHING
+- PRODUCT_SEARCH
+- BUSINESS_MATCHING
+- CONTENT_GENERATION
+- IMAGE_GENERATION
+- VIDEO_GENERATION
+- TELEGRAM_CONTENT
+- AUTOMATION
+- GENERAL_CHAT.
+
+---
+
+# 41. AI MEMORY
+
+Implement memory carefully.
+
+The AI may remember useful non-sensitive conversation context when appropriate.
+
+Do NOT permanently store private documents or personal information unless the platform explicitly requires it and the user has appropriate control.
+
+Provide:
+
+- conversation history
+- delete conversation
+- delete uploaded file
+- clear AI memory.
+
+---
+
+# 42. FILE SECURITY
+
+Uploaded files must have:
+
+- size validation
+- MIME validation
+- extension validation
+- malware/security scanning where available
+- access control
+- private storage
+- deletion support
+- expiration policies where appropriate.
+
+A private document must never become publicly searchable.
+
+---
+
+# 43. PERMISSION MODEL
+
+Create role-based access:
+
+### User
+
+Normal AI and personal file functions.
+
+### Employer
+
+Job AI.
+
+### Seller
+
+Marketplace AI.
+
+### Business
+
+Business AI.
+
+### Moderator
+
+Moderation tools.
+
+### Knowledge Administrator
+
+Orthodox knowledge management.
+
+### Platform Administrator
+
+System-wide administration.
+
+---
+
+# 44. KNOWLEDGE ADMIN DASHBOARD
+
+Create:
+
+# KNOWLEDGE ADMIN
+
+Dashboard metrics:
+
+- total sources
+- indexed documents
+- processing queue
+- failed documents
+- knowledge categories
+- source authority levels
+- recently added sources
+- outdated sources.
+
+Actions:
+
+Upload
+
+Index
+
+Re-index
+
+Archive
+
+Delete
+
+Preview
+
+Verify
+
+---
+
+# 45. AI ANALYTICS
+
+Create AI analytics:
+
+- AI requests
+- successful requests
+- failed requests
+- popular features
+- content generated
+- documents processed
+- searches
+- matches
+- recommendations
+- generation costs where measurable.
+
+Do not expose sensitive analytics to ordinary users.
+
+---
+
+# 46. COST MANAGEMENT
+
+Implement:
+
+- token limits
+- rate limits
+- caching
+- queueing
+- asynchronous jobs
+- retry policies
+- provider fallback
+- generation quotas
+- file-size limits
+- video-generation limits.
+
+Expensive video/image operations should be handled asynchronously.
+
+---
+
+# 47. BACKGROUND JOB SYSTEM
+
+For long-running tasks such as:
+
+- video processing
+- large document ingestion
+- OCR
+- transcription
+- embeddings
+- bulk content generation
+- scheduled publishing
+
+use background jobs/queues where the existing backend supports them.
+
+Show:
+
+Processing...
+
+Completed
+
+Failed
+
+Retry.
+
+Never freeze the UI waiting indefinitely.
+
+---
+
+# 48. REAL-TIME PROGRESS
+
+For long operations show:
+
+```text
+Uploading
+✓ File received
+
+Extracting
+✓ Text extracted
+
+Analyzing
+✓ AI analysis complete
+
+Generating
+● Creating content
+
+Finalizing
+○ Preparing export
+```
+
+---
+
+# 49. EXPORT CENTER
+
+Users can export:
+
+- TXT
+- PDF
+- DOCX where supported
+- CSV where appropriate
+- images
+- audio
+- video
+- subtitles
+- scripts.
+
+---
+
+# 50. PROFESSIONAL UI
+
+Create a premium UI for:
+
+- AI Chat
+- File Center
+- Knowledge Base
+- Content Studio
+- Video Studio
+- Telegram Studio
+- Automation Center
+- Content Calendar
+- AI Dashboard.
+
+Use consistent branding:
+
+Primary Blue: #123B6D
+
+Dark Navy: #08294F
+
+Gold: #D4A72C
+
+Light Gold: #F3D77A
+
+White: #FFFFFF
+
+Background: #F8FAFC
+
+Text: #172033
+
+The interface must feel like a serious technology product.
+
+---
+
+# 51. MOBILE EXPERIENCE
+
+Everything must work on mobile.
+
+Especially:
+
+- AI chat
+- file upload
+- camera/image upload
+- content creation
+- Telegram content
+- video creation
+- job search
+- marketplace.
+
+Use mobile-first design.
+
+---
+
+# 52. OFFLINE/LOW-BANDWIDTH CONSIDERATIONS
+
+For Ethiopia:
+
+- compress images
+- lazy-load videos
+- provide lightweight previews
+- allow resumable uploads where possible
+- cache static resources
+- avoid unnecessarily heavy pages.
+
+---
+
+# 53. NO PLACEHOLDERS
+
+Do not leave:
+
+"Coming soon"
+
+"Lorem ipsum"
+
+"AI will generate"
+
+"Video generated here"
+
+unless the functionality truly requires an external integration that is not configured.
+
+If a feature cannot currently execute because a provider is missing, clearly show:
+
+"External AI provider required"
+
+and provide the correct integration architecture.
+
+---
+
+# 54. NO FAKE AI
+
+Never display fabricated:
+
+- sources
+- citations
+- generated videos
+- uploaded files
+- users
+- jobs
+- products
+- messages
+- Telegram posts
+- social-media publishing status.
+
+Every status must represent a real system state.
+
+---
+
+# 55. FINAL END-TO-END WORKFLOW EXAMPLE
+
+### USER UPLOADS A PDF
+
+↓
+
+AI detects language.
+
+↓
+
+AI extracts text.
+
+↓
+
+AI analyzes document.
+
+↓
+
+User selects:
+
+"Create Everything"
+
+↓
+
+AI generates:
+
+- summary
+- study guide
+- quiz
+- Telegram post
+- Facebook post
+- Instagram caption
+- TikTok script
+- video storyboard
+- image concept
+- voiceover script.
+
+↓
+
+User reviews.
+
+↓
+
+User approves.
+
+↓
+
+Content is exported or published through REAL configured integrations.
+
+---
+
+# 56. FINAL ORTHODOX WORKFLOW
+
+### ADMIN UPLOADS APPROVED ORTHODOX BOOK
+
+↓
+
+Security validation
+
+↓
+
+Text extraction/OCR
+
+↓
+
+Metadata
+
+↓
+
+Authority classification
+
+↓
+
+Chunking
+
+↓
+
+Embeddings
+
+↓
+
+Vector index
+
+↓
+
+Knowledge Base
+
+↓
+
+User asks:
+
+"ስለ ይህ ትምህርት አስተምረኝ"
+
+↓
+
+Retriever finds relevant passages
+
+↓
+
+AI generates answer
+
+↓
+
+Answer includes source references
+
+↓
+
+User can:
+
+Ask Follow-up
+
+Study
+
+Summarize
+
+Generate Quiz
+
+Generate Telegram Post
+
+Generate Video Script
+
+Generate Social Content.
+
+---
+
+# 57. FINAL AUTOMATION WORKFLOW
+
+### NEW JOB
+
+↓
+
+AI analyzes job
+
+↓
+
+AI categorizes
+
+↓
+
+AI indexes
+
+↓
+
+AI finds relevant candidates
+
+↓
+
+Candidates receive recommendation
+
+↓
+
+Employer receives recommended candidates
+
+↓
+
+AI generates advertisement
+
+↓
+
+AI prepares Telegram content
+
+↓
+
+AI prepares social media package
+
+↓
+
+Human approval if required
+
+↓
+
+Publish through configured integrations.
+
+---
+
+# 58. FINAL MARKETPLACE WORKFLOW
+
+### NEW PRODUCT
+
+↓
+
+AI analyzes product
+
+↓
+
+AI improves listing
+
+↓
+
+AI categorizes
+
+↓
+
+AI indexes
+
+↓
+
+Potential buyers identified
+
+↓
+
+AI creates advertisement
+
+↓
+
+Telegram package
+
+↓
+
+Facebook package
+
+↓
+
+Instagram package
+
+↓
+
+TikTok package
+
+↓
+
+Video script
+
+↓
+
+Image concept
+
+↓
+
+Human approval
+
+↓
+
+Publish/export.
+
+---
+
+# 59. FINAL DEVELOPMENT RULE
+
+Do not implement this as disconnected features.
+
+Everything must communicate through a unified platform architecture.
+
+The AI assistant should be able to call the correct internal services.
+
+The Content Studio should be able to use platform data.
+
+The Knowledge Engine should be able to use uploaded files.
+
+The File Center should be able to send documents to AI.
+
+The Automation Engine should be able to trigger AI services.
+
+The Job Engine should be able to call the matching engine.
+
+The Marketplace should be able to call recommendation services.
+
+The Telegram system should use generated content.
+
+The Video Studio should use generated scripts/assets.
+
+---
+
+# 60. FINAL COMMAND TO THE AI CODING AGENT
+
+Now take the existing application and implement this architecture.
+
+Do NOT merely explain it.
+
+Do NOT only create UI.
+
+Do NOT create fake APIs.
+
+Do NOT create fake AI outputs.
+
+Do NOT create fake integrations.
+
+Inspect the existing application first.
+
+Then:
+
+1. Repair existing architecture where necessary.
+2. Build the AI service layer.
+3. Build the Orthodox Knowledge/RAG system.
+4. Build the File Intelligence system.
+5. Build AI Chat.
+6. Build AI Search.
+7. Build employment intelligence.
+8. Build marketplace intelligence.
+9. Build business matching.
+10. Build Content Studio.
+11. Build Image workflow.
+12. Build Video workflow.
+13. Build Voice workflow where supported.
+14. Build Telegram Studio.
+15. Build Automation Engine.
+16. Build Content Calendar.
+17. Build Knowledge Admin.
+18. Build AI Admin.
+19. Implement security.
+20. Implement permissions.
+21. Implement background processing.
+22. Implement error handling.
+23. Implement cost controls.
+24. Implement mobile responsiveness.
+25. Test every major workflow.
+
+When an external provider is required, integrate it only through secure server-side configuration.
+
+When no provider is available, implement the correct abstraction and truthful fallback workflow.
+
+The final product must be a real, scalable, professional AI platform — not a collection of mock features.
+
+# BUILD IT AS A COMPLETE SYSTEM.
